@@ -1,0 +1,30 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95vw;
+  margin-inline: auto;
+  margin-block: 1rem;
+  border-radius: 8px;
+
+  .content {
+    background: var(--opacity-gray-800);
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    height: calc(100vh - 7rem);
+    // padding-block: 0.5rem;
+    // padding-inline: 2rem;
+    overflow: hidden;
+
+    scroll-behavior: smooth;
+    scrollbar-color: var(--gray-900);
+    scrollbar-width: none;
+    overflow-y: scroll;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0; /* width of the entire scrollbar */
+    }
+  }
+}

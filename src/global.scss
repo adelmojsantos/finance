@@ -1,0 +1,67 @@
+:root {
+  --white: #fff;
+  --gray-100: #f3f4f6;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --opacity-gray-600: rgba(75, 85, 99, 0.5);
+  --opacity-gray-800: rgba(32, 32, 36, 0.8);
+  --opacity-gray-900: rgba(17, 17, 19, 0.7);
+  --opacity-dark-gray-900: rgba(17, 17, 19, 0.9);
+
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --green-800: #166534;
+
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-700: #b91c1c;
+
+  --cyan-500: #81d8f7;
+  --cyan-300: #9be1fb;
+
+  --purple-500: #8605b8;
+
+  --orange-400: #f87171;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+
+  // font-size: 62.5%;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--green-500);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--gray-900);
+  color: var(--gray-100);
+  -webkit-font-smoothing: antialiased;
+  background-image: url("./assets/arvore-dinheiro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem "Inter", sans-serif;
+}

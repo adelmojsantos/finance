@@ -1,0 +1,144 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 100vh;
+  color: var(--white);
+
+  .form-login {
+    background: var(--opacity-gray-900);
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40rem;
+    padding-block: 1.6rem;
+
+    header {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      img {
+        width: 10%;
+        height: 10%;
+        color: #fff;
+      }
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-inline: 1.6rem;
+
+      .form-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        // padding-inline: 1.6rem;
+        margin-bottom: 1.6rem;
+        position: relative;
+
+        input {
+          border: none;
+          border-radius: 4px;
+          width: 100%;
+          font-size: 1.4rem;
+          padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+          outline: none;
+
+          &:focus {
+            outline: none;
+            border: none;
+            box-shadow: 0 0 5px var(--purple-500);
+          }
+        }
+
+        .left {
+          position: absolute;
+          left: 0.55rem;
+          circle,
+          line,
+          path {
+            stroke: var(--gray-600);
+          }
+        }
+
+        .password {
+          position: absolute;
+          left: 93%;
+          top: 0.3rem;
+          font-size: 0;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: stroke 5s;
+          background: transparent;
+
+          &:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+          }
+
+          &:hover {
+            svg {
+              circle,
+              line,
+              path {
+                stroke: var(--gray-300);
+              }
+            }
+          }
+        }
+      }
+
+      .send-button {
+        border: 1px solid var(--gray-900);
+        display: flex;
+        justify-content: center;
+      }
+
+      .login-loader {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding-block: 1rem;
+
+      a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          color: var(--gray-100);
+        }
+      }
+
+      .forget-password {
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          color: var(--gray-300);
+        }
+      }
+    }
+  }
+}

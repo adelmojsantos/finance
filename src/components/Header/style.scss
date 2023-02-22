@@ -1,0 +1,124 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--gray-700);
+  width: 100%;
+  height: 4.5rem;
+  border-bottom: 1px solid rgba(225, 225, 230, 0.2);
+
+  // margin-inline: auto;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+  font-size: 1rem;
+
+  border-radius: 8px 8px 0 0;
+
+  .image {
+    width: 6rem;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+
+    a {
+      text-decoration: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1rem;
+
+      color: var(--gray-100);
+      // border-top: 3px solid transparent;
+      // border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+      position: relative;
+      /*   &:hover {
+        border-bottom: 3px solid var(--green-500);
+      } */
+
+      /* &.active {
+        border-bottom: 3px solid var(--green-500);
+      } */
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--green-300);
+        transform: translate(-25%);
+        opacity: 0;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      &.active::after {
+        transform: translateX(0);
+        background-color: var(--green-500);
+        opacity: 1;
+      }
+    }
+  }
+
+  .exit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+
+    span {
+      font-size: 0.75rem;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.25rem;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: var(--gray-100);
+      outline: none;
+      transition: color 0.3s;
+      display: flex;
+      font-size: small;
+
+      &:hover {
+        color: var(--red-400);
+      }
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 4px;
+      }
+      &:active {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}

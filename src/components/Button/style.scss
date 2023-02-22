@@ -1,0 +1,19 @@
+.button {
+  padding-block: 0.75rem;
+  padding-inline: 0.75rem;
+  background: var(--cyan-500);
+  border-radius: 4px;
+  font-weight: 600;
+  color: #000;
+  width: 100%;
+  transition: background 0.3s;
+
+  &:hover {
+    background: var(--cyan-300);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
