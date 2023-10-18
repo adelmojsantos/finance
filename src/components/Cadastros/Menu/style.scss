@@ -31,7 +31,7 @@
       background: var(--gray-400);
       transition: all 0.3s;
       z-index: -1;
-      transform: translateX(-110%);
+      transform: translateX(-125%);
     }
     &:hover::before {
       transform: translateX(0);

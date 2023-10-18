@@ -8,9 +8,9 @@ export function Table({ tableHead, title, children }) {
           <tr>
             {tableHead.map((item, index) => {
               return (
-                <td key={`${item}-${index}`}>
+                <th key={`${item}-${index}`}>
                   {item}
-                </td>
+                </th>
               )
             })}
           </tr>

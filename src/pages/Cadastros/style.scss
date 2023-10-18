@@ -11,4 +11,11 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+  .content-cadastros {
+    .resp-container {
+      .table-body {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -15,7 +15,7 @@ export function Cadastros() {
   const [data, setData] = useState([
     {
       id: `despesa-${despesas.length * 10 + 1}`,
-      descricao: "Despesas",
+      descricao: "Origem Despesas",
       total: despesas.length,
       path: "despesas"
     },
@@ -63,8 +63,8 @@ export function Cadastros() {
         .select('*', { count: 'exact', head: true })
 
       newData.push({
-        id: `despesa-${count * 10 + 1}`,
-        descricao: "Despesas",
+        id: `despesa-${Math.floor(Math.random() * count)}`,
+        descricao: "Origem Despesa",
         total: count,
         path: "despesas"
       })
@@ -75,7 +75,7 @@ export function Cadastros() {
         .select('*', { count: 'exact', head: true })
 
       newData.push({
-        id: `resp-${count * 10 + 1}`,
+        id: `resp-${Math.floor(Math.random() * count)}`,
         descricao: "Responsáveis",
         total: count,
         path: "responsavel"
@@ -87,7 +87,7 @@ export function Cadastros() {
         .select('*', { count: 'exact', head: true })
 
       newData.push({
-        id: `tipo-despesa-${count * 10 + 1}`,
+        id: `tipo-despesa-${Math.floor(Math.random() * count)}`,
         descricao: "Tipos Despesa",
         total: count,
         path: "tipo-despesa"
@@ -98,15 +98,18 @@ export function Cadastros() {
     getRespCount()
     getTipoDespesaCount()
 
-    newData.sort(function (a, b) {
+    const sortData = newData.sort(function (a, b) {
+      if (a.descricao > b.descricao) {
+        return 1;
+      }
       if (a.descricao < b.descricao) {
         return -1;
-      } else {
-        return true;
       }
+      // a must be equal to b
+      return 0;
     });
 
-    setData(newData)
+    setData(sortData)
 
   }, [])
 
@@ -124,7 +127,9 @@ export function Cadastros() {
                 tableHead={head}
                 title=""
               >
+                {/* <div className="table-body"> */}
                 {tableBody()}
+                {/* </div> */}
               </Table>
             ) :
               <NoDataTable
